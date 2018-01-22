@@ -445,32 +445,70 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   padding: 0 27px;
+  list-style: none;
   color: #ffffff;
+  outline: 2px solid red;
 }
 
-.popular-list li {
+.popular-item {
+  position: relative;
   margin-left: 26px;
+  margin-bottom: 35px;
+}
+
+.popular-item:first-child {
+  margin-left: 0;
+}
+
+.popular-item img {
+  margin-bottom: 7px;
+}
+
+.popular-hit {
+  position: absolute;
+  top: 0;
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-image: url("../img/hit.svg");
 }
 
 .popular-price {
+  position: absolute;
+  left: 0;
+  top: 210px;
   display: flex;
 }
 
 .popular-price p {
+  margin: 0;
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
+  outline: 2px solid blue;
 }
 
 .popular-price span {
+  margin: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 45px;
+  outline: 2px solid blue;
+}
+
+.popular-item h3 {
+  margin: 0;
+  padding: 0 7px;
+  text-align: center;
 }
 
 .popular-item a {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
   color: #ffffff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .features {
