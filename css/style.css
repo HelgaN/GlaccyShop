@@ -31,11 +31,6 @@ input[type="radio"].visually-hidden {
 
 .button {
   display: inline-block;
-  padding: 12px 44px;
-
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
   text-align: center;
   color: #ffffff;
   vertical-align: top;
@@ -176,6 +171,14 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.site-navigation li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.site-navigation li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
 .site-navigation li:hover {
   background-color: #fbded7;
 }
@@ -278,14 +281,33 @@ input[type="radio"].visually-hidden {
 
 .info-navigation {
   width: 267px;
+  margin-top: -5px;
   margin-left: auto;
   color: #ffffff;
-  outline: 2px solid red;
+}
+
+.info-navigation p {
+  margin: 0;
+}
+
+.operating-time {
+  padding-bottom: 3px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.contact-phone {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: right;
 }
 
 .slider {
   position: relative;
-  padding-top: 321px;
+  padding-top: 276px;
   text-align: center;
   color: #ffffff;
 }
@@ -303,7 +325,7 @@ input[type="radio"].visually-hidden {
 .slide-title {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 30px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
@@ -358,6 +380,10 @@ input[type="radio"].visually-hidden {
 
 .slide-button {
   margin-bottom: 40px;
+  padding: 10px 39px 10px 41px;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
 }
 
 .suggestions {
@@ -369,7 +395,13 @@ input[type="radio"].visually-hidden {
 }
 
 .suggestions-item {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px 23px 20px;
+}
+
+.suggestions-item p {
+  margin: 0;
 }
 
 .sug-one {
@@ -389,9 +421,24 @@ input[type="radio"].visually-hidden {
 }
 
 .suggestions-title {
+  padding-bottom: 15px;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
+}
+.suggestions-info {
+  padding-bottom: 45px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.suggestions-button {
+  align-self: flex-end;
+  padding: 10px 22px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .popular-list {
