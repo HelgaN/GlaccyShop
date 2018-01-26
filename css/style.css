@@ -625,7 +625,7 @@ input[type="radio"].visually-hidden {
 .blog-news {
   width: 560px;
   box-sizing: border-box;
-  padding: 27px 260px 27px 20px;
+  padding: 23px 255px 27px 20px;
   background-color: #ffffff;
   background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
@@ -633,10 +633,13 @@ input[type="radio"].visually-hidden {
 }
 
 .blog-news p {
+  margin: 0;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 
 .blog-news h2 {
+  margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -654,28 +657,44 @@ input[type="radio"].visually-hidden {
   background-image: repeating-linear-gradient(
   -45deg,
   #92cdff,
-  #92cdff 9px,
-  #ffffff 9px,
-  #ffffff 18px,
+  #92cdff 6px,
+  #ffffff 6px,
+  #ffffff 12px,
+  #fe9e90 12px,
   #fe9e90 18px,
-  #fe9e90 27px,
-  #ffffff 27px,
-  #ffffff 36px
+  #ffffff 18px,
+  #ffffff 24px
   );
   border-radius: 15px;
 }
 
 .subscription {
-  min-height: 210px;
   margin: 5px;
-  padding: 30px 25px;
+  padding: 30px 21px;
   background-color: #ffffff;
   border-radius: 15px;
 }
 
 .subscription-container p {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+}
+
+.subscription-form input {
+  box-sizing: border-box;
+  width: 370px;
+  padding: 8px 15px 10px 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.button-subscription {
+  padding: 13px 21px;
+  font-weight: 700;
 }
 
 .contacts {
