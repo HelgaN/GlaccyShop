@@ -444,6 +444,7 @@ input[type="radio"].visually-hidden {
 .popular-list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
   padding: 0 27px;
   list-style: none;
   color: #ffffff;
@@ -514,15 +515,19 @@ input[type="radio"].visually-hidden {
 .features {
   margin: 0 27px;
   margin-bottom: 40px;
-  padding: 30px 18px;
+  padding: 25px 0;
   color: #323232;
   background-color: #ebdfc4;
   background-image: url("../img/waffle-bg.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 15px;
 }
 
 .features-info {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0 20px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -530,14 +535,84 @@ input[type="radio"].visually-hidden {
 
 .features-list {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
 .features-list li {
-  width: 541px;
+  width: 573px;
   box-sizing: border-box;
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 75px;
+  padding-right: 20px;
+}
+
+.features-list li:first-child {
+  margin-bottom: 22px;
+}
+
+.features-item-1 {
+  position: relative;
+  order: 0;
+}
+
+.features-item-1::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: -11px;
+  width: 49px;
+  height: 49px;
+  background-image: url("../img/ice-cream.svg");
+}
+
+.features-item-2 {
+  position: relative;
+  order: 2;
+}
+
+.features-item-2::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: -11px;
+  width: 49px;
+  height: 49px;
+  background-image: url("../img/leaf.svg");
+}
+
+.features-item-3 {
+  position: relative;
+  order: 1;
+}
+
+.features-item-3::before {
+  position: absolute;
+  content: "";
+  left: 15px;
+  top: -11px;
+  width: 49px;
+  height: 49px;
+  background-image: url("../img/cow.svg");
+}
+
+.features-item-4 {
+  position: relative;
+  order: 3;
+}
+
+.features-item-4::before {
+  position: absolute;
+  content: "";
+  left: 15px;
+  top: -11px;
+  width: 49px;
+  height: 49px;
+  background-image: url("../img/thermometer.svg");
 }
 
 .block-wrapper {
