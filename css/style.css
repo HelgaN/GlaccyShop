@@ -770,40 +770,61 @@ input[type="radio"].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 17px;
 }
 
-.footer-social li {
-  margin-left: 10px;
+.footer-social svg {
+ margin-right: 11px;
+ border: 3px solid rgba(255, 255, 255, 0.4);
+ border-radius: 50%;
 }
 
 .menu-links {
+  position: relative;
   width: 560px;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
-  padding: 0 120px;
-  outline: 2px solid red;
+  padding: 13px 100px 29px 100px;
+}
+
+.menu-links::before {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 103px;
+  width: 15px;
+  height: 13px;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+}
+
+.menu-links li {
+  min-width: 143px;
 }
 
 .menu-links a {
-  margin-left: 27px;
+  margin-left: 25px;
   font-size: 13px;
   line-height: 18px;
   color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .footer-copyright p {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 12px;
   line-height: 18px;
   color: #ffffff;
 }
 
 .footer-copyright span {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .catalog-navigation {
