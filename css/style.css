@@ -698,25 +698,42 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts {
-  min-height: 430px;
+  position: relative;
   margin: 0;
+  padding: 63px 0;
   background-color: #ccdfbe;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts::before {
+  position: absolute;
+  content: "";
+  width: 213px;
+  height: 142px;
+  top: 139px;
+  left: 266px;
+  background-image: url("../img/marker.png");
 }
 
 .contacts-container {
-  width: 300px;
+  width: 302px;
   box-sizing: border-box;
   margin-left: 870px;
-  padding: 30px 26px;
+  padding: 29px 20px 30px 26px;
   background-color: #ffffff;
   border-radius: 15px;
 }
 
 .contacts-container p {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
+}
+
+.contacts-container p:first-child {
+  padding-right: 100px;
 }
 
 .contacts-container .contacts-info {
@@ -725,8 +742,17 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
 }
 
+.contacts-container .contacts-info-address {
+  margin-bottom: 18px;
+}
+
+.contacts-container .contacts-info-tel {
+  margin-top: 5px;
+}
+
 .button-contacts {
-  padding: 13px 25px;
+  margin-top: 25px;
+  padding: 10px 27px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
