@@ -22,7 +22,7 @@
           </a>
           <ul class="navigation-container">
             <li class="navigation-catalog">
-              <a href="#">Каталог</a>
+              <a class="navigation-item" href="#">Каталог</a>
               <ul class="site-navigation">
                 <li class="news"><a href="new-items.html">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
@@ -32,10 +32,10 @@
               </ul>
             </li>
             <li>
-              <a href="shipping-payment.html">Доставка и оплата </a>
+              <a class="navigation-item" href="shipping-payment.html">Доставка и оплата </a>
             </li>
             <li>
-              <a href="about.us">О Компании</a>
+              <a class="navigation-item" href="about.us">О Компании</a>
             </li>
           </ul>
           <div class="user-container">
@@ -50,10 +50,26 @@
               </svg><span class="visually-hidden">Поиск</span></a></li>
             </ul>
             <ul class="user-navigation">
-              <li><a class="login-link" href="login.html">Вход</a></li>
+              <li><a class="login-link" href="login.html">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
+              <g>
+              	<polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+              	<path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
+              		/>
+              </g>
+              </svg>Вход</a></li>
             </ul>
             <ul class="user-cart">
-              <li><a class="cart-link" href="cart.html">Пусто</a></li>
+              <li><a class="cart-link" href="cart.html"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+              <g>
+              	<path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+              		L17.372,13z"/>
+              	<circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
+              	<circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
+              </g>
+              </svg>Пусто</a></li>
             </ul>
           </div>
         </nav>
@@ -274,8 +290,81 @@
         </div>
 
       </footer>
+
+      <section class="modal modal-search">
+        <h2 class="visually-hidden">Окно поиска</h2>
+        <label for="search-line" class="visually-hidden">Что ищем?</label>
+        <input class="user-search-line" id="search-line" type="text" name="search" placeholder="Что ищем?">
+      </section>
+
+      <section class="modal modal-account">
+        <h2 class="visually-hidden">Кабинет пользоватля</h2>
+        <form class="account-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-email">Электронная почта</label>
+            <input class="account-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input class="account-password" id="user-password" type="password" name="password" placeholder="Пароль">
+          </p>
+          <div class="account-container">
+          <button class="button button-account" type="submit">Войти</button>
+          <p>
+            <a class="account-link" href="#">Забыли пароль?</a>
+            <a class="account-link" href="#">Новая регистрация</a>
+          </p>
+        </div>
+        </form>
+      </section>
+
     </div>
   </div>
+
+  <script>
+    var userSerch = document.querySelector(".user-search");
+    var modalSerch = document.querySelector(".modal-search");
+
+    userSerch.onmouseover = function(){
+        modalSerch.style.display="block";
+    };
+
+    userSerch.onmouseout = function(){
+       modalSerch.style.display="block";
+   };
+
+    modalSerch.onmouseover = function(){
+        modalSerch.style.display="block";
+    };
+
+     modalSerch.onmouseout = function(){
+       modalSerch.style.display="none";
+   };
+
+  </script>
+
+  <script>
+    var userNav = document.querySelector(".user-navigation");
+    var modalAccount = document.querySelector(".modal-account");
+
+    userNav.onmouseover = function(){
+        modalAccount.style.display="block";
+    };
+
+    userNav.onmouseout = function(){
+       modalAccount.style.display="block";
+   };
+
+    modalAccount.onmouseover = function(){
+        modalAccount.style.display="block";
+    };
+
+     modalAccount.onmouseout = function(){
+       modalAccount.style.display="none";
+   };
+
+  </script>
+
 </body>
 
 </html>
