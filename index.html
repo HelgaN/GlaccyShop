@@ -132,7 +132,7 @@
               <div class="popular-hit"><span class="visually-hidden">Хит</span></div>
               <img src="img/popular-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               <div class="popular-price">
-                <p>310 &#8381;</p>
+                <p>310<span class="price-rub">&#8381;</span></p>
                 <span>/кг</span>
               </div>
               <h3><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -141,7 +141,7 @@
               <div class="popular-hit"><span class="visually-hidden">Хит</span></div>
               <img src="img/popular-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               <div class="popular-price">
-                <p>380 &#8381;</p>
+                <p>380<span class="price-rub">&#8381;</span></p>
                 <span>/кг</span>
               </div>
               <h3><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
@@ -150,7 +150,7 @@
               <div class="popular-hit"><span class="visually-hidden">Хит</span></div>
               <img src="img/popular-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               <div class="popular-price">
-                <p>355 &#8381;</p>
+                <p>355<span class="price-rub">&#8381;</span></p>
                 <span>/кг</span>
               </div>
               <h3><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
@@ -159,7 +159,7 @@
               <div class="popular-hit"><span class="visually-hidden">Хит</span></div>
               <img src="img/popular-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               <div class="popular-price">
-                <p>415 &#8381;</p>
+                <p>415<span class="price-rub">&#8381;</span></p>
                 <span>/кг</span>
               </div>
               <h3><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
@@ -169,7 +169,7 @@
 
         <section class="features">
           <h2 class="visually-hidden">Преимущества</h2>
-          <p class="features-info">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</p>
+          <p class="features-info">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
           <ul class="features-list">
             <li class="features-item-1">
               Все наше мороженое изготавливается на собственном производстве,
@@ -318,6 +318,27 @@
         </form>
       </section>
 
+      <section class="modal modal-feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <p class="feedback-paragraph">Мы обязательно вам ответим!</p>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-name">Ваше имя</label>
+            <input class="feedback-name" id="user-name" type="text" name="name" placeholder="Как вас зовут?">
+          </p>
+          <p>
+            <label class="visually-hidden" for="feedback-user-email">Пароль</label>
+            <input class="feedback-email" id="feedback-user-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+          </p>
+          <p class="feedback-text">
+            <label class="visually-hidden" for="feedback-textarea">Ваше сообщение</label>
+            <textarea id="feedback-textarea" name="text-area" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+          </p>
+          <button class="button button-feedback" type="submit">Отправить</button>
+        </form>
+        <button class="modal-feedback-close" type="button">Закрыть</button>
+      </section>
+
     </div>
   </div>
 
@@ -362,6 +383,26 @@
      modalAccount.onmouseout = function(){
        modalAccount.style.display="none";
    };
+
+  </script>
+
+  <script>
+  var link = document.querySelector(".button-contacts");
+  var popup = document.querySelector(".modal-feedback");
+  var close = document.querySelector(".modal-feedback-close");
+
+  popup.classList.add("modal-feedback");
+
+  link.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  popup.classList.toggle('modal-feedback-hidden');
+  window.scrollTo(0,0);
+  });
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-feedback-hidden");
+  });
 
   </script>
 

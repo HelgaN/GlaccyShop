@@ -132,7 +132,7 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .navigation-container > li:hover {
@@ -255,7 +255,7 @@ input[type="radio"].visually-hidden {
   width: 33px;
   height: 33px;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   color: #ffffff;
 }
@@ -295,7 +295,7 @@ input[type="radio"].visually-hidden {
   display: block;
   padding: 8px 15px 8px 44px;
   margin-left: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   color: #ffffff;
   font-size: 14px;
@@ -324,7 +324,7 @@ input[type="radio"].visually-hidden {
 .user-cart a {
   padding: 8px 34px 8px 45px;
   margin-left: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   color: #ffffff;
   font-size: 14px;
@@ -412,6 +412,10 @@ input[type="radio"].visually-hidden {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls label:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 #product-1:checked ~ .site-wrapper #slide1,
@@ -511,7 +515,6 @@ input[type="radio"].visually-hidden {
   padding: 0 27px;
   list-style: none;
   color: #ffffff;
-  outline: 2px solid red;
 }
 
 .popular-item {
@@ -550,15 +553,23 @@ input[type="radio"].visually-hidden {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
-  outline: 2px solid blue;
+}
+
+.popular-price .price-rub,
+.item-price .price-rub {
+  margin: 0;
+  margin-left: 3px;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
 }
 
 .popular-price span {
   margin: 0;
+  padding-top: 4px;
   font-size: 30px;
   font-weight: 700;
   line-height: 45px;
-  outline: 2px solid blue;
 }
 
 .popular-item h3 {
@@ -572,7 +583,7 @@ input[type="radio"].visually-hidden {
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .features {
@@ -968,6 +979,93 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid #d3d3d2;
 }
 
+.modal-feedback {
+  position: absolute;
+  display: none;
+  width: 478px;
+  box-sizing: border-box;
+  top: 14%;
+  left: 30%;
+  padding: 16px 25px 20px 25px;
+  border-radius: 12px;
+}
+
+.modal-feedback-hidden {
+  display: block;
+}
+
+.feedback-paragraph {
+  margin: 0;
+  margin-bottom: 19px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.feedback-form input {
+  width: 268px;
+  box-sizing: border-box;
+  padding: 10px 13px 9px 13px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.feedback-text textarea {
+  width: 429px;
+  min-height: 155px;
+  box-sizing: border-box;
+  padding: 8px 13px 10px 13px;
+  margin-bottom: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.button-feedback {
+  padding: 10px 23px;
+  margin-left: 292px;
+  margin-bottom: 7px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.modal-feedback-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-feedback-close::before,
+.modal-feedback-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 22px;
+  height: 3px;
+  background-color: #323232;
+}
+
+.modal-feedback-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-feedback-close::after {
+  transform: rotate(-45deg);
+}
+
 ::-webkit-input-placeholder {color:#999999; opacity:1; font-weight: 400;}/* webkit */
 ::-moz-placeholder          {color:#999999; opacity:1; font-weight: 400;}/* Firefox 19+ */
 :-moz-placeholder           {color:#999999; opacity:1; font-weight: 400;}/* Firefox 18- */
@@ -976,7 +1074,14 @@ input[type="radio"].visually-hidden {
 input:focus:-moz-placeholder {color:transparent;}
 input:focus::-webkit-input-placeholder {color:transparent;}
 
+textarea:focus:-moz-placeholder {color:transparent;}
+textarea:focus::-webkit-input-placeholder {color:transparent;}
+
 .modal input:hover {
+  border: 1px solid #c7c6c5;
+}
+
+.modal textarea:hover {
   border: 1px solid #c7c6c5;
 }
 
