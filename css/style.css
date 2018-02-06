@@ -157,6 +157,16 @@ input[type="radio"].visually-hidden {
   border-bottom: none;
 }
 
+.active-link,
+.site-navigation .active-link:hover,
+.site-navigation .active-link:active {
+  background-color: #d07058;
+}
+
+.active-link a {
+  cursor: default;
+}
+
 .navigation-catalog {
   position: relative;
 }
@@ -446,7 +456,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-button {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   padding: 10px 39px 10px 41px;
   font-size: 32px;
   line-height: 44px;
@@ -464,7 +474,7 @@ input[type="radio"].visually-hidden {
 .suggestions-item {
   display: flex;
   flex-direction: column;
-  padding: 16px 20px 25px 20px;
+  padding: 16px 20px 22px 20px;
 }
 
 .suggestions-item p {
@@ -477,6 +487,7 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
   background-color: #9d1a35;
   background-image: url("../img/raspberry-bg.jpg");
+  background-position: center;
 }
 
 .sug-two {
@@ -494,7 +505,7 @@ input[type="radio"].visually-hidden {
   line-height: 41px;
 }
 .suggestions-info {
-  padding-bottom: 48px;
+  padding-bottom: 45px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -502,13 +513,14 @@ input[type="radio"].visually-hidden {
 
 .suggestions-button {
   align-self: flex-end;
-  padding: 10px 22px;
+  padding: 11px 23px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
 }
 
-.popular-list {
+.popular-list,
+.product-list {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -521,10 +533,11 @@ input[type="radio"].visually-hidden {
 .popular-item {
   position: relative;
   margin-left: 26px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
-.popular-item a {
+.popular-item a,
+.product-item a {
   position: relative;
   z-index: 3;
 }
@@ -533,7 +546,8 @@ input[type="radio"].visually-hidden {
   margin-left: 0;
 }
 
-.popular-item img {
+.popular-item img,
+.product-item img {
   margin-bottom: 7px;
 }
 
@@ -553,15 +567,15 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
-.popular-price p {
+.popular-price p,
+.item-price p {
   margin: 0;
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
 }
 
-.popular-price .price-rub,
-.item-price .price-rub {
+.popular-price .price-rub {
   margin: 0;
   margin-left: 3px;
   font-size: 45px;
@@ -573,7 +587,8 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-.popular-price span {
+.popular-price span,
+.item-price span {
   margin: 0;
   padding-top: 4px;
   color: #ffffff;
@@ -582,7 +597,8 @@ input[type="radio"].visually-hidden {
   line-height: 45px;
 }
 
-.popular-item h3 {
+.popular-item h3,
+.product-item h3  {
   margin: 0;
   padding: 0 7px;
   text-align: center;
@@ -612,7 +628,8 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
 }
 
-.popular-item:hover .transparent-container {
+.popular-item:hover .transparent-container,
+.product-item:hover .transparent-container {
   display: block;
 }
 
@@ -631,7 +648,7 @@ input[type="radio"].visually-hidden {
 .features {
   margin: 0 27px;
   margin-bottom: 40px;
-  padding: 25px 0;
+  padding: 25px 0 23px 0;
   color: #323232;
   background-color: #ebdfc4;
   background-image: url("../img/waffle-bg.jpg");
@@ -741,7 +758,7 @@ input[type="radio"].visually-hidden {
 .blog-news {
   width: 560px;
   box-sizing: border-box;
-  padding: 23px 255px 27px 20px;
+  padding: 23px 255px 25px 20px;
   background-color: #ffffff;
   background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
@@ -750,7 +767,7 @@ input[type="radio"].visually-hidden {
 
 .blog-news p {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   font-weight: 500;
 }
 
@@ -798,7 +815,7 @@ input[type="radio"].visually-hidden {
 
 .subscription-container p {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .subscription-form input {
@@ -821,7 +838,7 @@ input[type="radio"].visually-hidden {
 .contacts {
   position: relative;
   margin: 0;
-  padding: 63px 0;
+  padding: 60px 0;
   background-color: #ccdfbe;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -1235,29 +1252,29 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
 }
 
 .product-item {
+  position: relative;
   width: 267px;
   margin-bottom: 40px;
   box-sizing: border-box;
 }
 
 .item-price {
-  color: #ffffff;
+  position: absolute;
+  top: -50px;
+  display: flex;
   font-weight: 700;
 }
 
-.item-price p {
+.item-price .price-rub {
+  margin: 0;
+  margin-left: 3px;
   font-size: 45px;
-  line-height: 45px;
-}
-
-.item-price span {
-  font-size: 30px;
+  font-weight: 700;
   line-height: 45px;
 }
 
 .product-item a {
   color: #ffffff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .pagination-list {
@@ -1277,4 +1294,32 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
 
 .pagination-list  a {
   color: #ffffff;
+}
+
+.container-index-middle {
+  z-index: 10;
+}
+
+.product-item .index-middle {
+  position: relative;
+  z-index: 11;
+}
+
+.index-middle .title-underline {
+  position: relative;
+  z-index: 12;
+}
+
+.container-index-high {
+  z-index: 20;
+}
+
+.product-item .index-high {
+  position: relative;
+  z-index: 21;
+}
+
+.index-high .title-underline {
+  position: relative;
+  z-index: 22;
 }
