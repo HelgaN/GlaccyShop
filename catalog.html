@@ -54,8 +54,10 @@
               </g>
               </svg>Вход</a></li>
             </ul>
+
             <ul class="user-cart">
-              <li><a class="cart-link" href="cart.html"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <li class="user-cart-item">
+                <a class="cart-link" href="cart.html"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
               <g>
               	<path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
@@ -63,7 +65,29 @@
               	<circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
               	<circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
               </g>
-              </svg>Пусто</a></li>
+              </svg>
+              <svg class="full-cart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+              <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
+              <circle fill="#343434" cx="6.984" cy="18" r="2"/>
+              <circle fill="#343434" cx="15.984" cy="18" r="2"/>
+              <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+              	L17.372,13z"/>
+              </svg>
+              <span class="full-cart-text">Пусто</span></a>
+
+              <div class="user-cart-inside">
+                <ul>
+                  <li class="user-cart-product"><a href="#"><img src="img/popular-1.png" width="34" height="34" alt="Пломбир с апельсиновым джемом"><h3>Пломбир с апельсиновым джемом</h3><p>1,5 кг х <span>200 руб.</span> 300 руб.</p></a></li>
+
+                  <li class="user-cart-product"><a href="#"><img src="img/popular-3.png" width="34" height="34" alt="Клубничный пломбир с присыпкой  из белого шоколада"><h3>Клубничный пломбир с присыпкой  из белого шоколада</h3><p>1,5 кг х <span>300 руб.</span> 450 руб.</p></a></li>
+                </ul>
+
+                <p class="total-price">Итого: 750 руб.</p>
+
+                <button class="button button-cart" type="submit">Оформить заказ</button>
+              </div>
+            </li>
             </ul>
           </div>
         </nav>
@@ -86,7 +110,86 @@
     <section class="filter">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
-        <!-- Здесь будет форма-->
+
+        <fieldset class="filter-sort">
+          <legend>Сортировка</legend>
+          <select name="sort">
+            <option value="по популярности">по популярности</option>
+            <option value="сначала дорогие">сначала недоррие</option>
+            <option value="сначал недорогие">сначала дорогие</option>
+            <option value="по жирности">по жирности</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="filter-price">
+          <legend>Цена: 100 руб. - 500 руб.</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+        </fieldset>
+
+        <fieldset class="filter-fatness">
+          <legend>Жирность</legend>
+          <ul>
+            <li>
+              <input type="radio" name="fatness" value="percent-0" id="fatness-0">
+              <label for="fatness-0">0%</label>
+            </li>
+
+            <li>
+              <input type="radio" name="fatness" value="percent-10" id="fatness-10" checked>
+              <label for="fatness-10">до 10%</label>
+            </li>
+
+            <li>
+              <input type="radio" name="fatness" value="percent-30" id="fatness-30">
+              <label for="fatness-30">до 30%</label>
+            </li>
+
+            <li>
+              <input type="radio" name="fatness" value="percent-30-more" id="fatness-30-more">
+              <label for="fatness-30-more">выше 30%</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="filter-topping">
+          <legend>Наполнители:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="chocolate" id="chocolate" checked>
+              <label for="chocolate">шоколадные</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="sugar" id="sugar" checked>
+              <label for="sugar">сахарные присыпки</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="fruits" id="fruits" >
+              <label for="fruits">фрукты</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="syrups" id="syrups">
+              <label for="syrups">сиропы</label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="jams" id="jams">
+              <label for="jams">джемы</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <button class="button button-form-catalog" type="submit">Применить</button>
+
       </form>
     </section>
 
@@ -336,6 +439,91 @@
   </footer>
 </div>
 </div>
+
+<section class="modal modal-search">
+  <h2 class="visually-hidden">Окно поиска</h2>
+  <label for="search-line" class="visually-hidden">Что ищем?</label>
+  <input class="user-search-line" id="search-line" type="text" name="search" placeholder="Что ищем?">
+</section>
+
+<section class="modal modal-account">
+  <h2 class="visually-hidden">Кабинет пользоватля</h2>
+  <form class="account-form" action="https://echo.htmlacademy.ru" method="post">
+    <p>
+      <label class="visually-hidden" for="user-email">Электронная почта</label>
+      <input class="account-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+    </p>
+    <p>
+      <label class="visually-hidden" for="user-password">Пароль</label>
+      <input class="account-password" id="user-password" type="password" name="password" placeholder="Пароль">
+    </p>
+    <div class="account-container">
+    <button class="button button-account" type="submit">Войти</button>
+    <p>
+      <a class="account-link" href="#">Забыли пароль?</a>
+      <a class="account-link" href="#">Новая регистрация</a>
+    </p>
+  </div>
+  </form>
+</section>
+
+<script>
+  var userSerch = document.querySelector(".user-search");
+  var modalSerch = document.querySelector(".modal-search");
+
+  userSerch.onmouseover = function(){
+      modalSerch.style.display="block";
+  };
+
+  userSerch.onmouseout = function(){
+     modalSerch.style.display="block";
+ };
+
+  modalSerch.onmouseover = function(){
+      modalSerch.style.display="block";
+  };
+
+   modalSerch.onmouseout = function(){
+     modalSerch.style.display="none";
+ };
+
+</script>
+
+<script>
+  var userNav = document.querySelector(".user-navigation");
+  var modalAccount = document.querySelector(".modal-account");
+
+  userNav.onmouseover = function(){
+      modalAccount.style.display="block";
+  };
+
+  userNav.onmouseout = function(){
+     modalAccount.style.display="block";
+ };
+
+  modalAccount.onmouseover = function(){
+      modalAccount.style.display="block";
+  };
+
+   modalAccount.onmouseout = function(){
+     modalAccount.style.display="none";
+ };
+
+</script>
+
+<script>
+  var userCartEmpty = document.querySelector(".cart-link");
+  var userCartFull = document.querySelector(".full-cart-text");
+
+  userCartEmpty.onmouseover = function(){
+      userCartFull.innerHTML = "2 товара";
+  };
+
+  userCartEmpty.onmouseout = function(){
+     userCartFull.innerHTML = "Пусто";
+ };
+
+</script>
 
 </body>
 </html>

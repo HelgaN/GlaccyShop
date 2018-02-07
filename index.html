@@ -69,7 +69,15 @@
               	<circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
               	<circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
               </g>
-              </svg>Пусто</a></li>
+              </svg>
+              <svg class="full-cart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+              <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
+              <circle fill="#343434" cx="6.984" cy="18" r="2"/>
+              <circle fill="#343434" cx="15.984" cy="18" r="2"/>
+              <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+              	L17.372,13z"/>
+              </svg><span class="full-cart-text">Пусто</span></a></li>
             </ul>
           </div>
         </nav>
@@ -184,7 +192,7 @@
                 <a class="button item-button" href="#">Быстрый просмотр</a>
               </div>
             </li>
-            
+
           </ul>
         </section>
 
@@ -427,6 +435,20 @@
     evt.preventDefault();
     popup.classList.remove("modal-feedback-hidden");
   });
+
+  </script>
+
+  <script>
+    var userCartEmpty = document.querySelector(".cart-link");
+    var userCartFull = document.querySelector(".full-cart-text");
+
+    userCartEmpty.onmouseover = function(){
+        userCartFull.innerHTML = "2 товара";
+    };
+
+    userCartEmpty.onmouseout = function(){
+       userCartFull.innerHTML = "Пусто";
+   };
 
   </script>
 
