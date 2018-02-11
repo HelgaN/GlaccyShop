@@ -1749,25 +1749,6 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
   color: #ffffff;
 }
 
-.pagination-list {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0 27px;
-  padding-bottom: 30px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-}
-
-.pagination-item {
-  width: 30px;
-  height: 30px;
-}
-
-.pagination-list  a {
-  color: #ffffff;
-}
-
 .container-index-middle {
   z-index: 10;
 }
@@ -1794,4 +1775,43 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
 .index-high .title-underline {
   position: relative;
   z-index: 22;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0 17px;
+  list-style: none;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.pagination-item a {
+  display: block;
+  width: 27px;
+  height: 27px;
+  margin-left: 2px;
+  font: inherit;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.link-more a {
+  margin-left: 5px;
+}
+
+.pagination-item a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item a:active {
+  color: #323232;
+  background-color: #ffffff;
 }
