@@ -43,19 +43,19 @@
               <li><a class="search-link" href="search.html"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
               	 height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
               <g id="Layer_2">
-              	<path fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+              	<path  class="user-search-svg" fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
               		S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
               		S11,4.019,11,6.5S8.981,11,6.5,11z"/>
               </g>
               </svg><span class="visually-hidden">Поиск</span></a></li>
             </ul>
             <ul class="user-navigation">
-              <li><a class="login-link" href="login.html">
+              <li><a class="user-nav-link" href="login.html">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
               <g>
-              	<polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
-              	<path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
+              	<polygon class="user-nav-svg-polygon" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+              	<path class="user-nav-svg-path" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
               		/>
               </g>
               </svg>Вход</a></li>
@@ -317,13 +317,15 @@
         <div class="body-overlay"></div>
       </footer>
 
-      <section class="modal modal-search">
+      <section class="modal modal-search modal-search-show">
         <h2 class="visually-hidden">Окно поиска</h2>
+        <div>
         <label for="search-line" class="visually-hidden">Что ищем?</label>
         <input class="user-search-line" id="search-line" type="text" name="search" placeholder="Что ищем?">
+      </div>
       </section>
 
-      <section class="modal modal-account">
+      <section class="modal modal-account modal-account-show">
         <h2 class="visually-hidden">Кабинет пользоватля</h2>
         <form class="account-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
@@ -368,73 +370,15 @@
     </div>
   </div>
 
-  <script>
-    var userSerch = document.querySelector(".user-search");
-    var modalSerch = document.querySelector(".modal-search");
+  <script src="js/script.js"></script>
+<!--
 
-    userSerch.onmouseover = function(){
-        modalSerch.style.display="block";
-    };
-
-    userSerch.onmouseout = function(){
-       modalSerch.style.display="block";
-   };
-
-    modalSerch.onmouseover = function(){
-        modalSerch.style.display="block";
-    };
-
-     modalSerch.onmouseout = function(){
-       modalSerch.style.display="none";
-   };
-
-  </script>
 
   <script>
-    var userNav = document.querySelector(".user-navigation");
-    var modalAccount = document.querySelector(".modal-account");
-
-    userNav.onmouseover = function(){
-        modalAccount.style.display="block";
-    };
-
-    userNav.onmouseout = function(){
-       modalAccount.style.display="block";
-   };
-
-    modalAccount.onmouseover = function(){
-        modalAccount.style.display="block";
-    };
-
-     modalAccount.onmouseout = function(){
-       modalAccount.style.display="none";
-   };
+  
 
   </script>
-
-  <script>
-  var link = document.querySelector(".button-contacts");
-  var popup = document.querySelector(".modal-feedback");
-  var close = document.querySelector(".modal-feedback-close");
-  var overlay = document.querySelector(".body-overlay")
-
-  popup.classList.add("modal-feedback");
-
-  link.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popup.classList.toggle('modal-feedback-hidden');
-  overlay.style.display="block";
-  window.scrollTo(0,250);
-  });
-
-  close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-feedback-hidden");
-    overlay.style.display="none";
-  });
-
-  </script>
-
+-->
 </body>
 
 </html>

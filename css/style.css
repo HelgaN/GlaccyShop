@@ -185,7 +185,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation {
   width: 144px;
-  /*display: none;*/
+  display: none;
   opacity: 0;
    -webkit-transition: opacity .3s ease-in;
       -moz-transition: opacity .3s ease-in;
@@ -245,7 +245,7 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation-catalog:hover .site-navigation {
-  /*display: block;*/
+  display: block;
   opacity: 1;
     -webkit-transition: opacity .3s ease-out;
        -moz-transition: opacity .3s ease-out;
@@ -282,10 +282,19 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
+.user-nav-hover {
+  color: #f8f7f4;
+}
+
 .user-search a:hover,
 .user-navigation a:hover,
 .user-cart a:hover {
   background-color: #f8f7f4;
+}
+
+.user-search-hover {
+  background-color: #f8f7f4;
+  border-radius: 50%;
 }
 
 .user-search a:hover path,
@@ -293,6 +302,10 @@ input[type="radio"].visually-hidden {
 .user-navigation a:hover polygon,
 .user-cart a:hover path,
 .user-cart a:hover circle {
+  fill: #000000;
+}
+
+.user-search-hover-svg {
   fill: #000000;
 }
 
@@ -329,6 +342,15 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top:6px;
   left: 26px;
+}
+
+.user-nav-hover-svg {
+  fill: #000000;
+}
+
+.user-navigation .user-nav-link-hover {
+  color: #323232;
+  background-color: #f8f7f4;
 }
 
 .user-cart {
@@ -1192,6 +1214,10 @@ input[type="radio"].visually-hidden {
   padding: 20px 16px;
 }
 
+.modal-search-show {
+  display: block;
+}
+
 .modal-search input[type="text"] {
   width: 310px;
   box-sizing: border-box;
@@ -1210,6 +1236,10 @@ input[type="radio"].visually-hidden {
   top: 60px;
   left: 64.25%;
   padding: 20px;
+}
+
+.modal-account-show {
+  display: block;
 }
 
 .account-form p {
