@@ -69,11 +69,26 @@ var popup = document.querySelector(".modal-feedback");
 var close = document.querySelector(".modal-feedback-close");
 var overlay = document.querySelector(".body-overlay")
 
+var userName = document.querySelector("[name=name]");
+var userEmail = document.querySelector("[name=feedback-email]");
+var message = document.querySelector("[name=text-area]")
+var storage = localStorage.getItem("userName");
+
+var form = document.querySelector(".feedback-form");
+
+
 popup.classList.add("modal-feedback");
 
 link.addEventListener("click", function(evt) {
 evt.preventDefault();
 popup.classList.toggle('modal-feedback-hidden');
+
+if (storage) {
+      userName.value = storage;
+      userEmail.focus();
+    } else {
+      userName.focus();
+    }
 overlay.style.display="block";
 window.scrollTo(0,250);
 });
@@ -82,4 +97,30 @@ close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-feedback-hidden");
   overlay.style.display="none";
+  popup.classList.remove("modal-error");
 });
+
+function addShake() {
+  popup.classList.remove("modal-error");
+}
+
+form.addEventListener("submit", function (evt) {
+  if(!userName.value || !userEmail.value || !message.value){
+    evt.preventDefault();
+    popup.classList.add("modal-error");
+    setTimeout(addShake, 1000);
+  } else {
+    localStorage.setItem("userName", userName.value);
+  }
+
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (popup.classList.contains("modal-feedback-hidden")) {
+        popup.classList.remove("modal-feedback-hidden");
+        overlay.style.display="none";
+        popup.classList.remove("modal-error");
+      }
+    }
+  });
