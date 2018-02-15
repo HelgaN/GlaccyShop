@@ -184,13 +184,11 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation {
-  width: 144px;
-  display: none;
   opacity: 0;
-   -webkit-transition: opacity .3s ease-in;
-      -moz-transition: opacity .3s ease-in;
-        -o-transition: opacity .3s ease-in;
-           transition: opacity .3s ease-in;
+  visibility: hidden;
+  transition: all .3s ease .15s;
+  width: 144px;
+  /*display: none;*/
   position: absolute;
   top: 37px;
   margin: 0;
@@ -245,12 +243,9 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation-catalog:hover .site-navigation {
-  display: block;
+  /*display: block;*/
   opacity: 1;
-    -webkit-transition: opacity .3s ease-out;
-       -moz-transition: opacity .3s ease-out;
-         -o-transition: opacity .3s ease-out;
-            transition: opacity .3s ease-out;
+  visibility: visible;
 }
 
 .user-container {
@@ -1015,7 +1010,7 @@ input[type="radio"].visually-hidden {
 .contacts {
   position: relative;
   margin: 0;
-  padding: 60px 0;
+  padding: 40px 0 60px 0;
   background-color: #ccdfbe;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -1033,12 +1028,20 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts-container {
+  position: relative;
+  z-index: 2;
   width: 302px;
   box-sizing: border-box;
   margin-left: 870px;
-  padding: 29px 20px 32px 26px;
+  padding: 29px 20px 30px 26px;
   background-color: #ffffff;
   border-radius: 15px;
+}
+
+.contacts iframe {
+  position: absolute;
+  top: 0;
+  border: none;
 }
 
 .contacts-container p {
@@ -1851,8 +1854,8 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  margin: 0;
-  padding: 0 17px;
+  margin: 0 25px;
+  padding: 0;
   list-style: none;
   padding-bottom: 30px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
@@ -1862,7 +1865,6 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
   display: block;
   width: 27px;
   height: 27px;
-  margin-left: 2px;
   font: inherit;
   font-weight: 500;
   line-height: 28px;
@@ -1872,7 +1874,8 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
 }
 
 .link-more a {
-  margin-left: 5px;
+  margin-right: -7px;
+  margin-left: 7px;
 }
 
 .pagination-item a:hover {

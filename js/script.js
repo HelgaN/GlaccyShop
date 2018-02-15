@@ -75,6 +75,10 @@ var message = document.querySelector("[name=text-area]")
 var storage = localStorage.getItem("userName");
 
 var form = document.querySelector(".feedback-form");
+var form2 = document.querySelector(".account-form");
+var userPass2 = document.querySelector("[name=password]");
+var userEmail2 = document.querySelector("[name=email]");
+var popup2 = document.querySelector(".modal-account");
 
 
 popup.classList.add("modal-feedback");
@@ -114,6 +118,19 @@ form.addEventListener("submit", function (evt) {
   }
 
   });
+
+  form2.addEventListener("submit", function (evt) {
+      popup2.classList.remove("modal-error");
+    if(!userEmail2.value || !userPass2.value ){
+      evt.preventDefault();
+      popup2.classList.remove("modal-error");
+      popup2.offsetWidth == popup2.offsetWidth;
+      popup2.classList.add("modal-error");
+    } else {
+      localStorage.setItem("userEmail2", userEmail2.value);
+    }
+
+    });
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
