@@ -1653,7 +1653,6 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  outline: 4px solid red;
 }
 
 .input-radio-checkbox+label::before {
