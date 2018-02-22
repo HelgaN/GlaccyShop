@@ -69,9 +69,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper {
-  width: 1200px;
-  margin: 0 auto;
-  /*padding: 0 27px;*/
+   /*padding: 0 27px;*/
   background-color: #849d8f;
   background-image: url("../img/slide-1.png");
   background-repeat: no-repeat;
@@ -81,8 +79,6 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper-inner {
-  width: 1200px;
-  margin: 0 auto;
   background-color: #849d8f;
 }
 
@@ -1042,7 +1038,7 @@ input[type="radio"].visually-hidden {
   width: 302px;
   box-sizing: border-box;
   margin-left: 870px;
-  padding: 29px 20px 30px 26px;
+  padding: 30px 20px 33px 26px;
   background-color: #ffffff;
   border-radius: 15px;
 }
