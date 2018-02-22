@@ -69,6 +69,8 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper {
+  width: 1200px;
+  margin: 0 auto;
    /*padding: 0 27px;*/
   background-color: #849d8f;
   background-image: url("../img/slide-1.png");
@@ -79,6 +81,8 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper-inner {
+  width: 1200px;
+  margin: 0 auto;
   background-color: #849d8f;
 }
 
