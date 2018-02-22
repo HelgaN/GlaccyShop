@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", "Arail", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -628,7 +628,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-button {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   padding: 10px 39px 10px 41px;
   font-size: 32px;
   line-height: 44px;
@@ -657,8 +657,9 @@ input[type="radio"].visually-hidden {
   width: 560px;
   box-sizing: border-box;
   border-radius: 15px;
-  background-color: #9d1a35;
+  background-color: #370107;
   background-image: url("../img/raspberry-bg.jpg");
+  background-size: cover;
   background-position: center;
 }
 
@@ -668,6 +669,8 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
   background-color: #462d22;
   background-image: url("../img/choco-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .suggestions-title {
@@ -685,7 +688,7 @@ input[type="radio"].visually-hidden {
 
 .suggestions-button {
   align-self: flex-end;
-  padding: 11px 23px;
+  padding: 12px 23px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -705,7 +708,7 @@ input[type="radio"].visually-hidden {
 .popular-item {
   position: relative;
   margin-left: 26px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .popular-item a,
@@ -733,23 +736,18 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/hit.svg");
 }
 
-.popular-price {
+.popular-price,
+.item-price {
+  width: 267px;
   position: absolute;
   top: -50px;
   display: flex;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .popular-price p,
 .item-price p {
   margin: 0;
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 45px;
-}
-
-.popular-price .price-rub {
-  margin: 0;
-  margin-left: 3px;
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
@@ -762,11 +760,20 @@ input[type="radio"].visually-hidden {
 .popular-price span,
 .item-price span {
   margin: 0;
-  padding-top: 4px;
   color: #ffffff;
   font-size: 30px;
   font-weight: 700;
   line-height: 45px;
+}
+
+.popular-price img,
+.item-price img {
+  width: 30px;
+  height: 35px;
+  margin: 0;
+  margin-left: 5px;
+  padding-bottom: 7px;
+  vertical-align: bottom;
 }
 
 .popular-item h3,
@@ -820,7 +827,7 @@ input[type="radio"].visually-hidden {
 .features {
   margin: 0 27px;
   margin-bottom: 40px;
-  padding: 25px 0 23px 0;
+  padding: 25px 0 25px 0;
   color: #323232;
   background-color: #ebdfc4;
   background-image: url("../img/waffle-bg.jpg");
@@ -857,7 +864,7 @@ input[type="radio"].visually-hidden {
 }
 
 .features-list li:first-child {
-  margin-bottom: 23px;
+  margin-bottom: 26px;
 }
 
 .features-item-1 {
@@ -934,12 +941,14 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 15px;
 }
 
 .blog-news p {
   margin: 0;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 
@@ -987,7 +996,7 @@ input[type="radio"].visually-hidden {
 
 .subscription-container p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 }
 
 .subscription-form input {
@@ -1644,6 +1653,7 @@ textarea:focus::-webkit-input-placeholder {color:transparent;}
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  outline: 4px solid red;
 }
 
 .input-radio-checkbox+label::before {
